@@ -77,7 +77,11 @@ class App extends Component {
                   <div className="item-content">
                     <div className="item-text">{item.name}</div>
                     <div>
-                      <img className="itemPhoto" src={item.photo}></img>
+                      <img
+                        className="itemPhoto"
+                        src={item.photo}
+                        alt="aweosme"
+                      ></img>
                     </div>
 
                     <button
@@ -100,7 +104,11 @@ class App extends Component {
                   <div className="item-content">
                     <div className="item-text">{item.name}</div>
                     <div>
-                      <img className="itemPhoto" src={item.photo}></img>
+                      <img
+                        className="itemPhoto"
+                        src={item.photo}
+                        alt="aweosme"
+                      ></img>
                     </div>
                     <button
                       className="buttonclick"
