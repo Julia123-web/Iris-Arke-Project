@@ -2,30 +2,49 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  font-family: "Montserrat";
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.246),
+      rgba(255, 255, 255, 0.246)
+    ),
+    url("https://html-color.org/F3A89E.jpg");
+  margin-top: 0px;
+  align-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  background-color: #ff4c68;
+  color: #dddddd;
+  size: 4.5rem;
+  line-height: 1.5;
+}
+
+.buttonclick {
+  color: #fff;
+  background-color: #ff4c68;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.itemPhoto {
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
 }
 
 @keyframes App-logo-spin {
