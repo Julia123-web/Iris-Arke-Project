@@ -22,13 +22,19 @@ body {
 
 h1 {
   background-color: #ff4c68;
-  color: #dddddd;
+  color: #ddd;
   size: 4.5rem;
   line-height: 1.5;
 }
 
+h2 {
+  font-family: "Montserrat";
+  color: #ff4c68;
+  font-size: 50px;
+}
+
 .buttonclick {
-  color: #fff;
+  color: #ddd;
   background-color: #ff4c68;
   border: none;
   border-radius: 12px;
@@ -45,6 +51,67 @@ h1 {
   border-radius: 50%;
   height: 90px;
   width: 90px;
+}
+
+.item-text {
+  font-family: "Montserrat";
+  color: #6b6969;
+  font-size: 20px;
+}
+
+.listContainer {
+  display: flex;
+}
+
+.rightSide {
+  width: 50%;
+  flex: 1;
+}
+
+.leftSide {
+  width: 50%;
+  flex: 1;
+}
+
+.social-container {
+  background: #ddd;
+  padding: 25px 50px;
+}
+
+footer.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+footer.social:hover {
+  transform: translateY(-2px);
+}
+
+footer.facebook {
+  color: #4968ad;
+}
+
+footer.twitter {
+  color: #49a1eb;
+}
+
+footer.instagram {
+  color: black;
+}
+
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(235, 195, 64);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+p {
+  color: #8f8f8f;
 }
 
 @keyframes App-logo-spin {

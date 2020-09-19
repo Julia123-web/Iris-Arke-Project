@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ListGroup } from "react-bootstrap";
+//import { ListGroup } from "react-bootstrap";
 import "./App.css";
 
 class App extends Component {
@@ -56,7 +56,7 @@ class App extends Component {
   removeItem = (item) => {
     let myList = [...this.state.myList];
     myList = myList.filter(function (value, index, arr) {
-      return value != item;
+      return value !== item;
     });
     this.setState({ itemList: this.state.itemList, myList });
 
@@ -68,48 +68,51 @@ class App extends Component {
       <div className="App">
         <h1>List Iris Arke</h1>
         <br />
+        <div className="listContainer">
+          <div className="leftSide">
+            <h2>Product List</h2>
+            {this.state.itemList.map((item, index) => (
+              <div className="items" key={item.id}>
+                <div className="item">
+                  <div className="item-content">
+                    <div className="item-text">{item.name}</div>
+                    <div>
+                      <img className="itemPhoto" src={item.photo}></img>
+                    </div>
 
-        <div className="rightSide">
-          {this.state.itemList.map((item, index) => (
-            <div className="items" key={item.id}>
-              <div className="item">
-                <div className="item-content">
-                  <div className="item-text">{item.name}</div>
-                  <div>
-                    <img className="itemPhoto" src={item.photo}></img>
+                    <button
+                      className="buttonclick"
+                      onClick={() => this.addItem(item)}
+                    >
+                      Add to My List
+                    </button>
                   </div>
-
-                  <button
-                    className="buttonclick"
-                    onClick={() => this.addItem(item)}
-                  >
-                    Add to My List
-                  </button>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="leftSide">
-          {this.state.myList.map((item, index) => (
-            <div className="items" key={item.id}>
-              <div className="item">
-                <div className="item-content">
-                  <div className="item-text">{item.name}</div>
-                  <div>
-                    <img className="itemPhoto" src={item.photo}></img>
+          <div className="rightSide">
+            <h2>My Wish List </h2>
+            {this.state.myList.map((item, index) => (
+              <div className="items" key={item.id}>
+                <div className="item">
+                  <div className="item-content">
+                    <div className="item-text">{item.name}</div>
+                    <div>
+                      <img className="itemPhoto" src={item.photo}></img>
+                    </div>
+                    <button
+                      className="buttonclick"
+                      onClick={() => this.removeItem(item)}
+                    >
+                      Remove from My List
+                    </button>
                   </div>
-                  <button
-                    className="buttonclick"
-                    onClick={() => this.removeItem(item)}
-                  >
-                    Remove from My List
-                  </button>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     );
